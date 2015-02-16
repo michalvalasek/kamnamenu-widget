@@ -1,24 +1,39 @@
 var gulp = require('gulp');
+var source = require('vinyl-source-stream');
 var browserify = require('browserify');
-var transform = require('vinyl-transform');
+var streamify = require('gulp-streamify');
 var reactify = require('reactify');
 var uglify = require('gulp-uglify');
-var rename = require("gulp-rename");
+var rename = require('gulp-rename');
+var replace = require('gulp-replace');
 
-gulp.task('default', function(){
-  var browserified = transform(function(filename) {
-    var b = browserify(filename);
-    b.transform(reactify)
-    return b.bundle();
-  });
+function getBuildFunction(type) {
+  type = type=='small' ? 'small' : 'large';
+  path = {
+    OUT: 'kamnamenu-widget-'+type+'.min.js',
+    DEST: 'dist',
+    ENTRY_POINT: './src/'+type+'/main.jsx'
+  };
+  return function(){
+    browserify({
+      entries: [path.ENTRY_POINT],
+      transform: [reactify]
+    })
+      .bundle()
+      .pipe(source(path.OUT))
+      .pipe(replace(/#IMAGES_LOCATION#/g,'images'))
+      .pipe(streamify(uglify(path.OUT)))
+      .pipe(gulp.dest(path.DEST));
+  }
+}
 
-  return gulp.src(['./src/*.jsx'])
-    .pipe(browserified)
-    .pipe(uglify())
-    .pipe(rename('kamnamenu-widget.js'))
-    .pipe(gulp.dest('./dist'));
-});
+gulp.task('build-small', getBuildFunction('small'));
+
+gulp.task('build-large', getBuildFunction('large'));
 
 gulp.task('watch', function(){
-  gulp.watch('src/**/*.*',['default'])
+ gulp.watch('src/small/**/*.*',['build-small']);
+ gulp.watch('src/large/**/*.*',['build-large']);
 });
+
+gulp.task('default',['build-small','build-large']);

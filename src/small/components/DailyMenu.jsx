@@ -6,17 +6,18 @@ var DailyMenu = React.createClass({
   render: function(){
     var soups = this.props.data['soups'].map(function(item){
       return (
-        <MenuItem data={item} />
+        <MenuItem data={item} key="soup-{i}" />
       );
     });
-    var mains = this.props.data['mains'].map(function(item){
+    var mains = this.props.data['mains'].map(function(item, i){
       return (
-        <MenuItem data={item} />
+        <MenuItem data={item} key="main-{i}"/>
       );
     });
     var styles = {
       div: {clear:'both', padding:'1em'}
     };
+
     return(
       <div style={styles.div}>
         <h4>Polievky</h4>

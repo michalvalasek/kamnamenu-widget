@@ -22,7 +22,7 @@
           cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
           proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
-        <p>
+        <!-- <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -38,23 +38,15 @@
           consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
           cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
           proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        </p> -->
+        <!-- HERE COMES THE LARGE WIDGET -->
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/react/0.12.1/react.js"></script>
+        <script type="text/javascript">
+          var s = document.createElement("script");s.src="http://0.0.0.0:3333/dist/kamnamenu-widget-large.min.js";
+          var t = document.getElementsByTagName("script")[0];t.parentNode.appendChild(s);
+        </script>
+        <div id="kamnamenu-widget-holder-large" data-store-id="123"></div>
+        <!-- WIDGET END -->
       </div>
       <div class="col-md-4" id="right-bar" style="background:#f7f7f9;border:1px solid #e1e1e8;">
         <h2>Right Column!</h2>
@@ -66,13 +58,13 @@
           <li>Fifth</li>
         </ul>
         <hr>
-        <!-- HERE COMES THE WIDGET -->
-        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/react/0.12.1/react.min.js"></script>
+        <!-- HERE COMES THE SMALL WIDGET -->
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/react/0.12.1/react.js"></script>
         <script type="text/javascript">
-          var h = document.createElement("div");h.setAttribute('id','kamnamenu-widget-holder');
-          var s = document.createElement("script");s.src="http://0.0.0.0:3333/dist/kamnamenu-widget.js";
-          var t = document.getElementsByTagName("script")[0];t.parentNode.appendChild(h);t.parentNode.appendChild(s);
+          var s = document.createElement("script");s.src="http://0.0.0.0:3333/dist/kamnamenu-widget-small.min.js";
+          var t = document.getElementsByTagName("script")[0];t.parentNode.appendChild(s);
         </script>
+        <div id="kamnamenu-widget-holder-small" data-store-id="123"></div>
         <!-- WIDGET END -->
       </div>
     </div>

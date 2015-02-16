@@ -22,10 +22,10 @@ var KamnamenuWidget = React.createClass({
 
   render: function(){
     var styles = {
-      widget: {width:'300px', border:'1px solid #e1e1e8', background: '#fafafc'},
+      widget: {width:300, border:'1px solid #e1e1e8', background: '#fafafc'},
       header: {background:'#428bca', padding:'0 1em'},
-      headerTitle: {margin:'0', color:'#fafafc'},
-      headerSubtitle: {margin:'0',color:'#f7f7f9'}
+      headerTitle: {margin:0, color:'#fafafc'},
+      headerSubtitle: {margin:0,color:'#f7f7f9'}
     };
     return(
       <div style={styles.widget}>
