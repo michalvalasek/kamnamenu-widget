@@ -28,7 +28,7 @@ function getBuildFunction(type) {
       .pipe(replace(/#IMAGES_LOCATION#/g,'images'))
       .pipe(streamify(uglify(path.OUT)))
       .pipe(gulp.dest(path.DEST))
-      .on('error', onError);;
+      .on('error', onError);
   }
 }
 
