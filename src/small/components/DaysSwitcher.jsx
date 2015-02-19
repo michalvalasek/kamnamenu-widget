@@ -9,15 +9,15 @@ var DaysSwitcher = React.createClass({
   render: function(){
     var styles = {
       div: {background:'#f7f7f9', borderBottom:'1px solid #e1e1e8'},
-      leftArr: {width:'24px', float:'left'},
-      rightArr: {width:'24px', float:'right'},
-      day: {display:'inline-block', width:'250px', fontSize:'18px', textAlign:'center'}
+      leftArr: {width:24, height:25, float:'left', backgroundColor:'#D24E4C', border:0, color:'#ffffff'},
+      rightArr: {width:24, height:25, float:'right', backgroundColor:'#D24E4C', border:0, color:'#ffffff'},
+      day: {display:'inline-block', width:150, fontSize:13, textAlign:'center', color:'#415464', lineHeight:'25px', fontWeight:'bold'}
     };
     return(
       <div style={styles.div}>
-        <button onClick={this.props.onPreviousDay} style={styles.leftArr}>&lt;</button>
+        <button onClick={this.props.onPreviousDay} style={styles.leftArr}>&lang;</button>
         <span style={styles.day}>{this.dayName()}</span>
-        <button onClick={this.props.onNextDay} style={styles.rightArr}>&gt;</button>
+        <button onClick={this.props.onNextDay} style={styles.rightArr}>&rang;</button>
       </div>
     );
   }

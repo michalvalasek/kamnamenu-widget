@@ -23,7 +23,7 @@ var DailyMenu = React.createClass({
   render: function(){
     var menuItems = this.props.data[0].map(function(item,i){
       return (
-        <MenuItem data={item} key={i} itemIndex={i} />
+        <MenuItem data={item} key={i} />
       );
     });
 
