@@ -4,8 +4,6 @@ var browserify = require('browserify');
 var streamify = require('gulp-streamify');
 var reactify = require('reactify');
 var uglify = require('gulp-uglify');
-var rename = require('gulp-rename');
-var replace = require('gulp-replace');
 
 function onError(err) {
   console.log('error: ',err);
@@ -25,7 +23,6 @@ function getBuildFunction(type) {
     })
       .bundle()
       .pipe(source(path.OUT))
-      .pipe(replace(/#IMAGES_LOCATION#/g,'images'))
       .pipe(streamify(uglify(path.OUT)))
       .pipe(gulp.dest(path.DEST))
       .on('error', onError);
