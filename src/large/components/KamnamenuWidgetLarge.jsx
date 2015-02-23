@@ -1,5 +1,6 @@
 /** @jsx React.DOM */
 
+var embeddedImages = require('./../embeddedImages.js');
 var WeeklyMenu = require('./WeeklyMenu.jsx');
 
 var KamnamenuWidgetLarge = React.createClass({
@@ -29,7 +30,7 @@ var KamnamenuWidgetLarge = React.createClass({
   render: function(){
     var styles = {
       widget: {width:'100%', border:'1px solid #e1e1e8',background:'#fafafc', borderRadius:5,MozBorderRadius:5, WebkitBorderRadius:5, marginBottom:20},
-      header: {width:'100%', height:60, padding:'0 1em', background:"url('#IMAGES_LOCATION#/widget-big-logo.png') no-repeat 10px 5px", borderRadius:'5px 5px 0 0', MozBorderRadius:'5px 5px 0 0',WebkitBorderRadius:'5px 5px 0 0'},
+      header: {width:'100%', height:60, padding:'0 1em', background:"url("+embeddedImages.logo+") no-repeat 10px 5px", borderRadius:'5px 5px 0 0', MozBorderRadius:'5px 5px 0 0',WebkitBorderRadius:'5px 5px 0 0'},
       headerLink: {position:'relative', top:15, left:0, width:195, height:30, float:'left'}
     };
 
