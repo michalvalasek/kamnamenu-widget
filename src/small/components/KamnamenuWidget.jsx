@@ -46,12 +46,11 @@ var KamnamenuWidget = React.createClass({
 
   render: function(){
     var styles = {
-      widget: {width:200, border:'1px solid #e1e1e8', background:'#fafafc', borderRadius:5, MozBorderRadius:5, WebkitBorderRadius:5, marginBottom:20},
+      widget: {width:198, border:'1px solid #e1e1e8', background:'#fafafc', borderRadius:5, MozBorderRadius:5, WebkitBorderRadius:5, marginBottom:20},
       header: {width:'100%', height:73, padding:0, background:'#cccccc url('+embeddedImages.header+') no-repeat 0 0', borderRadius:'5px 5px 0 0', MozBorderRadius:'5px 5px 0 0', WebkitBorderRadius:'5px 5px 0 0'},
       headerLink: {position:'relative', top:10, left:10, width:180, height:25, float:'left'},
-      headerTitle: {margin:0, color:'#fafafc'},
-      headerSubtitle: {margin:0, color:'#f7f7f9'},
-      footer: {width:'100%', height:15, padding:'0 1em', background:'#cccccc url('+embeddedImages.footer+') no-repeat 0 -6px', borderRadius:'0 0 5px 5px', MozBorderRadius:'0 0 5px 5px', WebkitBorderRadius:'0 0 5px 5px', borderTop:'1px solid #e1e1e8'},
+      headerTitle: {margin:0, color:'#fafafc', fontFamily:'Arial, Helvetica, sans-serif'},
+      footer: {width:'100%', height:15, background:'#cccccc url('+embeddedImages.footer+') no-repeat 0 -6px', borderRadius:'0 0 5px 5px', MozBorderRadius:'0 0 5px 5px', WebkitBorderRadius:'0 0 5px 5px', borderTop:'1px solid #e1e1e8'},
       nocontent: {textAlign:'center', color:'#999999', padding:'2em 0'}
     };
 

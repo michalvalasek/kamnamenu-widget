@@ -11,7 +11,7 @@ var DailyMenu = React.createClass({
 
   dayName: function() {
     var dayNumber = this.state.date.getDay();
-    var days = ['Pondelok','Utorok','Streda','Stvrtok','Piatok','Sobota','Nedela'];
+    var days = ['Pondelok','Utorok','Streda','Štvrtok','Piatok','Sobota','Nedeľa'];
     return days[dayNumber];
   },
 
@@ -28,7 +28,7 @@ var DailyMenu = React.createClass({
     });
 
     var styles = {
-      date: {margin:0, backgroundColor:'#E1E9EF', color:'#4A3D3D', fontSize:13, padding:'5px 10px', color:'#415464'},
+      date: {margin:0, backgroundColor:'#E1E9EF', color:'#4A3D3D', fontSize:13, padding:'5px 10px', color:'#415464', fontFamily:'Arial, Helvetica, sans-serif'},
       table: {width:'100%', fontSize:11, marginTop:5, marginBottom:5, color:'#415464'}
     };
 

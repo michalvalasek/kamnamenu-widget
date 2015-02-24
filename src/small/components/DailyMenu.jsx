@@ -6,9 +6,9 @@ var DailyMenu = React.createClass({
   render: function(){
     var styles = {
       div: {clear:'both', padding:0},
-      section: {margin:0, backgroundColor:'#E1E9EF', color:'#4A3D3D', fontSize:13, padding:5, color:'#415464'},
+      section: {margin:0, backgroundColor:'#E1E9EF', color:'#4A3D3D', fontSize:13, padding:5, color:'#415464', fontFamily:'Arial, Helvetica, sans-serif'},
       table: {fontSize:11, marginTop:5, marginBottom:5, color:'#415464'},
-      nocontent: {textAlign:'center', color:'#999999', padding:'2em 0'}
+      nocontent: {textAlign:'center', color:'#999999', padding:'2em 0', fontFamily:'Arial, Helvetica, sans-serif'}
     };
 
     var meals = this.props.data[0];

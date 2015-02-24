@@ -3,7 +3,7 @@
 var DaysSwitcher = React.createClass({
   dayName: function() {
     dayNumber = Math.min(this.props.day, 6);
-    var days = ['Pondelok','Utorok','Streda','Stvrtok','Piatok','Sobota','Nedela'];
+    var days = ['Pondelok','Utorok','Streda','Štvrtok','Piatok','Sobota','Nedeľa'];
     return days[dayNumber];
   },
   render: function(){
@@ -11,7 +11,7 @@ var DaysSwitcher = React.createClass({
       div: {background:'#f7f7f9', borderBottom:'1px solid #e1e1e8'},
       leftArr: {width:24, height:25, float:'left', backgroundColor:'#D24E4C', border:0, color:'#ffffff'},
       rightArr: {width:24, height:25, float:'right', backgroundColor:'#D24E4C', border:0, color:'#ffffff'},
-      day: {display:'inline-block', width:150, fontSize:13, textAlign:'center', color:'#415464', lineHeight:'25px', fontWeight:'bold'}
+      day: {display:'inline-block', width:148, fontSize:13, textAlign:'center', color:'#415464', lineHeight:'25px', fontWeight:'bold', fontFamily:'Arial, Helvetica, sans-serif'}
     };
     return(
       <div style={styles.div}>

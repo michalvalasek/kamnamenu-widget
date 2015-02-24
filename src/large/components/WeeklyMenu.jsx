@@ -7,7 +7,7 @@ var WeeklyMenu = React.createClass({
   render: function(){
     var styles = {
       week: {clear:'both', padding:0},
-      nocontent: {textAlign:'center', color:'#999999', padding:'2em 0'}
+      nocontent: {textAlign:'center', color:'#999999', padding:'2em 0', fontFamily:'Arial, Helvetica, sans-serif'}
     };
 
     var content = this.props.data && this.props.data.length>0 ?
