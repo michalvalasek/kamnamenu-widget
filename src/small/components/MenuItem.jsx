@@ -10,7 +10,7 @@ var MenuItem = React.createClass({
     return(
       <tr style={styles.row}>
         <td style={styles.name}>{this.props.data[1]}</td>
-        <td style={styles.price}>{this.props.data[2]} &euro;</td>
+        <td style={styles.price}>{this.props.data[2]}&nbsp;&euro;</td>
       </tr>
     );
   }

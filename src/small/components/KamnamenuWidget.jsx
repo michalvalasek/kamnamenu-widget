@@ -51,7 +51,7 @@ var KamnamenuWidget = React.createClass({
       headerLink: {position:'relative', top:10, left:10, width:180, height:25, float:'left'},
       headerTitle: {margin:0, color:'#fafafc', fontFamily:'Arial, Helvetica, sans-serif'},
       footer: {width:'100%', height:15, background:'#cccccc url('+embeddedImages.footer+') no-repeat 0 -6px', borderRadius:'0 0 5px 5px', MozBorderRadius:'0 0 5px 5px', WebkitBorderRadius:'0 0 5px 5px', borderTop:'1px solid #e1e1e8'},
-      nocontent: {textAlign:'center', color:'#999999', padding:'2em 0'}
+      nocontent: {textAlign:'center', color:'#999999', padding:'2em 0', fontFamily:'Arial, Helvetica, sans-serif'}
     };
 
     var content = this.state.data && this.state.data.length>0 ?
