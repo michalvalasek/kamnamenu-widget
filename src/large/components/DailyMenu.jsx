@@ -4,20 +4,21 @@ var MenuItem = require('./MenuItem.jsx');
 
 var DailyMenu = React.createClass({
   getInitialState: function(){
-    var now = Date.now();
-    var date = new Date(now + this.props.dayIndex * 24 * 3600 * 1000);
+    var date = new Date(); // today
+    var diff = this.props.dayIndex - date.getDay() + 1; // how many days between today and the current day?
+    var date = new Date(date.getTime() + diff * 24 * 3600 * 1000); // current day's Date
     return { date: date };
   },
 
   dayName: function() {
     var dayNumber = this.state.date.getDay();
-    var days = ['Pondelok','Utorok','Streda','Štvrtok','Piatok','Sobota','Nedeľa'];
+    var days = ['Nedeľa','Pondelok','Utorok','Streda','Štvrtok','Piatok','Sobota'];
     return days[dayNumber];
   },
 
   formattedDate: function() {
     var d = this.state.date;
-    return (d.getDay()+1) + '.' + (d.getMonth()+1) + '.' + (d.getFullYear()+1);
+    return (d.getDate()) + '.' + (d.getMonth()+1) + '.' + (d.getFullYear());
   },
 
   render: function(){
